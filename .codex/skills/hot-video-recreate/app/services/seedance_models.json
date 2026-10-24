@@ -1,0 +1,17 @@
+[
+    {
+        "canvas_model_id": "doubao-seedance-2-0-mini-260128",
+        "name": "Seedance 2.0 Mini",
+        "provider": "volc_ark"
+    },
+    {
+        "canvas_model_id": "doubao-seedance-2-0-fast-260128",
+        "name": "Seedance 2.0 Fast",
+        "provider": "volc_ark"
+    },
+    {
+        "canvas_model_id": "doubao-seedance-2-0-260128",
+        "name": "Seedance 2.0 Standard",
+        "provider": "volc_ark"
+    }
+]

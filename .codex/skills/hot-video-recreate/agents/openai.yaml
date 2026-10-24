@@ -1,0 +1,22 @@
+interface:
+  display_name: "爆款视频复刻 hot-video-recreate"
+  short_description: "在本 Skill 目录执行 main.py。触发词 $recreate"
+  default_prompt: |
+    用户触发 hot-video-recreate / $recreate / 「爆款复刻」后按下列规则执行：
+
+    1. 项目根 = 本 Skill 目录（与 SKILL.md、main.py 同级），通常为
+       %USERPROFILE%\.codex\skills\hot-video-recreate
+       或 %CODEX_HOME%\skills\hot-video-recreate。
+       不要使用 D:\python_item\seedance-viral-oneclick。
+    2. 从消息提取参数：视频路径、产品图路径（可多张）、可选人脸/产品名/产品描述/分辨率/秒数。
+    3. 缺必填（视频或至少一张产品图）时再询问；不要生成假路径。
+    4. 确认本目录含 main.py；若无 .env 则提示从 .env.example 复制；
+       确认 .env 含 DASHSCOPE_API_KEY 与 VOLC_ARK_API_KEY；缺 Key 则提示配置后停止。
+    5. 仅在本 Skill 目录执行：
+       cd /d <本 Skill 目录>
+       python main.py --video "..." --image "..." [其它已提取参数]
+    6. 禁止修改业务代码；禁止生成 _runner.py 或任何临时业务脚本；禁止重写流水线。
+    7. 命令结束后只汇报 outputs/<run_id>/、manifest status、段数与 mp4 路径。
+
+policy:
+  allow_implicit_invocation: true
